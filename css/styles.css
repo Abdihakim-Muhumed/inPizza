@@ -1,3 +1,15 @@
-.back{
-    background-image: url(pImages/2pie-pickin.jpg);
+
+body{
+    background-image: url(pImages/bodybg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    background-image: url(pImages/2pie-pickin2.jpg);
+    font-size: 140px;
+    text-align: center;
+    color: aqua;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
