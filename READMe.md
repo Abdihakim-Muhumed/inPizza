@@ -1,6 +1,6 @@
 # inPizza
 # Author : Abdihakim Muhumed
-The project is for building a website through which users can order a pizza.It is meant to solve the problem people face to queue for take away pizzas at hotels.The site gives an option for delivery services.
+The project is for building a web application through which users can order a pizza.It is meant to solve the problem people face to queue for take away pizzas at hotels.The site gives an option for delivery services.
 # Setup Instructions
 Click this link to order a pizza on the site: https://abdihakim-muhumed.github.io/inPizza  
 # Technologies
