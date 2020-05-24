@@ -1,8 +1,9 @@
 
 body{
-    background-image: url(pImages/bodybg.jpg);
+    background-image: url(pImages/vegs-pie.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     color: white;
 }
 .header{
@@ -10,6 +11,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    
 }
 h1{
     font-size: 140px;
@@ -35,7 +37,8 @@ h1{
 .labels{
     text-align: center;
     font-size: 20px;
-    color: rgb(39, 37, 37);
+    color: rgb(27, 145, 27);
+    font: bold;
 }
 .size{
     margin: 10px;
