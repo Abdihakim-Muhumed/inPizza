@@ -23,7 +23,7 @@ h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #card-1{
-    background-image:url(pImages/pie\ -ladypicking-2.jpg) ;
+    background-image:url(pImages/wPizza.jpg) ;
     background-position: center;
     background-size: cover;
     background-clip: content-box;
@@ -41,38 +41,40 @@ h1{
     margin: 10px;
   }
   
-  .size input[type="radio"] {
+.size input[type="radio"] {
     opacity: 0;
     position: fixed;
     width: 0;
-  }
-  #size{
+}
+#size{
       padding-top: 20px;
-  }
+}
   
-  .size label {
-      display: inl ine-block;
-      background-color: red;
-      width: 110px;
-      padding: 5px 10px;
-      font-family: sans-serif, Arial;
-      font-size: 16px;
-      border: 2px solid #444;
-      border-radius: 4px;
-  }
+.size label {
+    display: inl ine-block;
+    background-color: red;
+    width: 150px;
+    padding: 5px 10px;
+    font-family: sans-serif, Arial;
+    font-size: 20px;
+    border: 2px solid #444;
+    border-radius: 4px;
+
+}
   
-  .size label:hover {
-    background-color: #dfd;
-  }
-  .size input[type="radio"]:checked + label{
-      background-color: chartreuse;
-  }
-  .flavour input[type="radio"] {
+.size label:hover {
+    background-color: chartreuse;
+}
+.size input[type="radio"]:checked + label{
+    background-color: rgb(92, 131, 92);
+    border: 2px dashed #444;
+}
+.flavour input[type="radio"] {
     opacity: 0;
     position: fixed;
     width: 0;
-  }
-  .flavour label {
+}
+.flavour label {
     display: inl ine-block;
     background-color: blueviolet;
     padding: 5px 10px;
@@ -83,7 +85,8 @@ h1{
 }
 
 .flavour label:hover {
-  background-color: #dfd;
+    background-color: rgb(92, 131, 92);
+    border: 2px dashed #444;
 }
 .flavour input[type="radio"]:checked + label{
     background-color: chartreuse;
@@ -95,7 +98,7 @@ h1{
   }
   .topping label {
     display: inl ine-block;
-    background-color: violet;
+    background-color: rgb(206, 177, 50);
     padding: 5px 10px;
     font-family: sans-serif, Arial;
     font-size: 16px;
@@ -104,17 +107,94 @@ h1{
 }
 
 .topping label:hover {
-  background-color: #dfd;
+  background-color: rgb(92, 131, 92);
+  border: 2px dashed #444;
 }
 .topping input[type="radio"]:checked + label{
     background-color: chartreuse;
 }
-  
+.crust input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  .crust label {
+    display: inl ine-block;
+    background-color: violet;
+    padding: 5px 10px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+
+.crust label:hover {
+  background-color: #dfd;
+}
+.crust input[type="radio"]:checked + label{
+    background-color: rgb(92, 131, 92);
+    border: 2px dashed #444;
+}
+.delivery input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+.delivery label {
+    margin: 10px;
+    display: inl ine-block;
+    background-color: rgb(33, 44, 44);
+    padding: 5px 10px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+
+.delivery label:hover {
+    background-color: rgb(92, 131, 92);
+    border: 2px dashed #444;
+}
+.delivery input[type="radio"]:checked + label{
+    background-color: chartreuse;
+}
+
+.submit button {
+    display: inl ine-block;
+    background-color: rgb(236, 52, 181);
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 20px;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+
+.submit button:hover {
+    background-color: rgb(92, 131, 92);
+    border: 2px dashed #444;
+}
   
 .order-form{
     font-size: 15px;
     
 }
-.del-location{
+.number input[type="text"]{
+    display: inline-block;
+    background-color: transparent;
+    font-size: 15px;
+    border: 2px solid #444;
+    color: #dfd;
+
+}
+::placeholder{
+    background: transparent;
+    color: rgb(197, 247, 59);
+    padding: 10px 20px;
+    font-size: 18px;
+}
+#regular{
+    font-size: 20px;
+}
+.first-hide{
     display: none;
 }
