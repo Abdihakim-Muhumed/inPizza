@@ -10,15 +10,13 @@ function Pizza(size,flavour,crusts){
 var numberOfPizza=1;
 var totalCost=0;
 var deliveryCost=0;
-$(document).ready(function(){
-    alert("yow1");
+$(document).ready(function(){   
     $("#order").click(function(){
         $("#to-hide").hide();
         var size=$("input[name='size']:checked").val();
         var flavour = $("input[name='flavour']:checked").val();
         var crusts = $("input[name='crusts']:checked").val();       
-        var initialCost,toppingsCost,crustCost,newPizza;      
-       
+        var initialCost,toppingsCost,crustCost,newPizza;             
         if($("input[name='size']:checked").val()==="Regular"){
              initialCost = 500;
             if($("input[class='toppings']:checked").val().length >0){
@@ -97,9 +95,8 @@ $(document).ready(function(){
         }
         var price = initialCost+crustCost+toppingsCost;
         
-         newPizza = new Pizza(size,flavour,crusts);
+        newPizza = new Pizza(size,flavour,crusts);
         $(".order-form").show();
-        alert(newPizza);
         $("#order-size").append(newPizza.size);
         $("#flavour").append(newPizza.flavour);
         $("#crusts").append(newPizza.crust);
