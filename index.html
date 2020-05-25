@@ -14,7 +14,7 @@
                     <p><b>Must be your choice for pizza feasts!</b></p>
                 </div>
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-7" id="to-hide">
                         <div class="card" id="card-1">
                             <div class="card-header" id="card-header">
                                 <h2>Choose your preferred pizza</h>
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <form class="order-form">
                             <div class="card" id="card-2">
                                 <div class="card-header" id="card-header2">
@@ -175,11 +175,9 @@
                                     <div class="row">
                                         <div class="col-md-9">
                                             <div class="row">
-                                                <div class="col-md-4">
-                                                    <p>Extras:</p>                                                
-                                                </div>
+                                                <div class="col-md-4"></div>
                                                 <div class="col-md-8">
-                                                    <p><span id="toppings"></span></p>                                                
+                                                    <p>Toppings:</p>                                                
                                                 </div>
                                             </div>
                                         </div>
@@ -189,7 +187,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-9">
-                                            <p style="text-align: right;">Sub-total:</p>
+                                            <p style="text-align: right;">Total:</p>
                                         </div>
                                         <div class="col-md-3">                                      
                                             <p><span id="pizza-cost"></span></p>                                                                               
@@ -198,18 +196,19 @@
                                 </div>                   
                                 <div class="row">                                   
                                     <div class="row">
-                                        <div class="col-md-8">
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-7">
                                             <p style="text-align: right;">How  many pizzas?</p>                                                
                                         </div>
-                                        <div class="col-md-4">
-                                            <input type="number" id="pizza-number">                                                
+                                        <div class="col-md-2">
+                                            <input type="number" id="pizza-number" value="1">                                                
                                         </div>
                                     </div>                                                                                                          
                                 </div>
                                 <div class="row">                                   
                                     <div  class="col-md-5"></div>
                                     <div class="col-md-7">
-                                        <button type="button" id="deliver">I want my pizza delivered</button>  
+                                        <p style="text-align: right;"><button type="button" id="deliver">I want my pizza delivered</button> </p> 
                                         <div class="location">
                                             <input type="text" id="location" placeholder="Enter location"><br>
                                             <p>Delivery charge: 100/=</p>   
@@ -218,7 +217,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <p style="text-align: right;"><button type="button" id="confirm">Confirm location </button></p>
+                                        <p style="text-align: right;"><button type="submit" id="confirm">Check out</button></p>
                                     </div>
                                     <div class="col-md-4">                                      
                                         <p><button type="reset">Reset </button></p>
@@ -227,13 +226,12 @@
                                 </div>                                                                 
                                 <div class="row">
                                     <div class="col-md-9">
-                                        <p style="text-align: right;">Total charges:</p>
+                                        <p style="text-align: right;"><span id="order-placed"></span></p>
                                     </div>
                                     <div class="col-md-3">                                      
-                                        <p id="total2"><span id="total-cost"></span></p>                                                                               
+                                        <p id="total2"><span id="total-cost"></span></p>                                        
                                     </div>                                   
-                                </div>
-                                                                                                                            
+                                </div>                                                                                                                                                            
                             </div>
                         </form>                       
                     </div>

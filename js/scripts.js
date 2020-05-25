@@ -1,16 +1,9 @@
 //back-end
-function Order(numberOfPizza,type,location,totalCost){
-    this.pizzas=numberOfPizza;
-    this.type= type;
-    this.location=location;
-    this.totalCost=totalCost;
-}
-function Pizza(size,flavour,crusts,toppings){
+
+function Pizza(size,flavour,crusts){
     this.size=size;
     this.flavour=flavour;
-    this.crust=crusts;
-    this.toppings=toppings;
-   
+    this.crust=crusts;  
 }
 
 //front-end
@@ -20,10 +13,10 @@ var deliveryCost=0;
 $(document).ready(function(){
     alert("yow1");
     $("#order").click(function(){
+        $("#to-hide").hide();
         var size=$("input[name='size']:checked").val();
         var flavour = $("input[name='flavour']:checked").val();
-        var crusts = $("input[name='crusts']:checked").val();
-        var toppings = $("input[class='toppings']:checked").val();
+        var crusts = $("input[name='crusts']:checked").val();       
         var initialCost,toppingsCost,crustCost,newPizza;      
        
         if($("input[name='size']:checked").val()==="Regular"){
@@ -40,7 +33,7 @@ $(document).ready(function(){
             else if($("input[class='median']:checked").val().length >0){
                  crustCost=300;
             }
-            else if($("input[class='median']:checked").val().length >0){
+            else if($("input[class='super']:checked").val().length >0){
                  crustCost=400;
             }
            
@@ -60,7 +53,7 @@ $(document).ready(function(){
             else if($("input[class='median']:checked").val().length >0){
                  crustCost=300;
             }
-            else if($("input[class='median']:checked").val().length >0){
+            else if($("input[class='super']:checked").val().length >0){
                  crustCost=400;
             }
         }
@@ -79,7 +72,7 @@ $(document).ready(function(){
             else if($("input[class='median']:checked").val().length >0){
                  crustCost=300;
             }
-            else if($("input[class='median']:checked").val().length >0){
+            else if($("input[class='super']:checked").val().length >0){
                  crustCost=400;
             }
         }
@@ -98,21 +91,20 @@ $(document).ready(function(){
             else if($("input[class='median']:checked").val().length >0){
                  crustCost=300;
             }
-            else if($("input[class='median']:checked").val().length >0){
+            else if($("input[class='super']:checked").val().length >0){
                  crustCost=400;
             }
         }
         var price = initialCost+crustCost+toppingsCost;
         
-         newPizza = new Pizza(size,flavour,crusts,toppings);
+         newPizza = new Pizza(size,flavour,crusts);
         $(".order-form").show();
         alert(newPizza);
         $("#order-size").append(newPizza.size);
         $("#flavour").append(newPizza.flavour);
         $("#crusts").append(newPizza.crust);
         $("#initial-cost").append(initialCost);
-        $("#crust-cost").append(crustCost);
-        $("#toppings").append(newPizza.toppings);
+        $("#crust-cost").append(crustCost);       
         $("#toppings-cost").append(toppingsCost);
         $("#pizza-cost").append(price);
         
@@ -123,9 +115,13 @@ $(document).ready(function(){
         $("#confirm").click(function(){
             numberOfPizza=$("#pizza-number").val();
             totalCost=(price*numberOfPizza)+deliveryCost;
-            $("#total-cost").append(totalCost);
-            deliveryCost=0;
-            price=0;
+            if($("#location").val().length<0){              
+                alert("Enter valid location!")
+            }
+            else{                
+                alert("Your order will be delivered to "+ $("#location").val());
+                alert(" Order placed Total charges:" +totalCost );
+            }
         });        
     });
     
