@@ -14,6 +14,9 @@ function Pizza(size,flavour,crusts,toppings){
 }
 
 //front-end
+var numberOfPizza=1;
+var totalCost=0;
+var deliveryCost=0;
 $(document).ready(function(){
     alert("yow1");
     $("#order").click(function(){
@@ -106,16 +109,24 @@ $(document).ready(function(){
         alert(newPizza);
         $("#order-size").append(newPizza.size);
         $("#flavour").append(newPizza.flavour);
-        $("#crust").append(newPizza.crusts);
+        $("#crusts").append(newPizza.crust);
         $("#initial-cost").append(initialCost);
-        $("crust-cost").append(crustCost);
+        $("#crust-cost").append(crustCost);
         $("#toppings").append(newPizza.toppings);
         $("#toppings-cost").append(toppingsCost);
         $("#pizza-cost").append(price);
-
+        
         $("#deliver").click(function(){
-            $(".location").show();
+            deliveryCost=100;
+            $(".location").show();                      
         });
+        $("#confirm").click(function(){
+            numberOfPizza=$("#pizza-number").val();
+            totalCost=(price*numberOfPizza)+deliveryCost;
+            $("#total-cost").append(totalCost);
+            deliveryCost=0;
+            price=0;
+        });        
     });
     
 });
