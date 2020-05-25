@@ -9,19 +9,20 @@ function Order(size,flavour,crusts,toppings,numberOfPizza,type,location,totalCos
     this.location=location;
     this.totalCost=totalCost;
 }
+
 //front-end
 $(document).ready(){
     $("form.order-form").submit(function(){
         var size=$("input[name='size']:checked").val();
         var flavour = $("input[name='flavour']:checked").val();
         var crusts = $("input[name='crusts']:checked").val();
-        var toppings = $("input[name='toppings']:checked").val();
+        var toppings = $("input[class='toppings']:checked").val();
         var numberOfPizza = $("#number-pizza").val();
         var type = $("input[name='type']:checked").val();
         var location = $("#location").val();
         if($("input[name='size']:checked").val()==="Regular"){
             var initialCost = 500;
-            if($("input[name='toppings']:checked").val().length >0){
+            if($("input[class='toppings']:checked").val().length >0){
                 var toppingsCost = 50;
                 
             }
@@ -31,7 +32,7 @@ $(document).ready(){
         }
         else if($("input[name='size']:checked").val()==="Medium"){
             var initialCost = 700;
-            if($("input[name='toppings']:checked").val().length >0){
+            if($("input[class='toppings']:checked").val().length >0){
                 var toppingsCost = 100;
                 
             }
@@ -41,7 +42,7 @@ $(document).ready(){
         }
         else if($("input[name='size']:checked").val()==="Large"){
             var initialCost = 900;
-            if($("input[name='toppings']:checked").val().length >0){
+            if($("input[class='toppings']:checked").val().length >0){
                 var toppingsCost = 150;
                 
             }
@@ -51,7 +52,7 @@ $(document).ready(){
         }
         else if($("input[name='size']:checked").val()==="Mega"){
             var initialCost = 1100;
-            if($("input[name='toppings']:checked").val().length >0){
+            if($("input[class='toppings']:checked").val().length >0){
                 var toppingsCost = 200;
                 
             }
@@ -67,6 +68,8 @@ $(document).ready(){
             deliveryCost=0;
         }
         var totalCost = initialCost+toppingsCost+deliveryCost;
+
+        var newOrder = new Order(size,flavour,crusts,toppings,numberOfPizza,type,locstion,totalCost);
         
     });
 }
