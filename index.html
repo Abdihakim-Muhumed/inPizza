@@ -13,14 +13,13 @@
                     <p><b>Must be your choice for pizza feasts!</b></p>
                 </div>
                 <div class="row">
-                    <div class="col-md-1"></div>
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div class="card" id="card-1">
                             <div class="card-header" id="card-header">
                                 <h2>Choose your preferred pizza</h>
                             </div>
                             <div class="card-body">
-                                <form class="order-form">
+                                <div class="pizza-choice">
                                     <div class="row" id="row-1">
                                         <div class="col-md-2" id="col-1"><label for="size" class="labels" id="size">Size: </label></div>
                                         <div class="col-md-10">
@@ -29,7 +28,7 @@
                                                 <label for="regular"style="font-size:20px;">Regular @ 500/=</label>
                                         
                                                 <input type="radio" id="medium" name="size" value="Medium">
-                                                <label for="medium" style="font-size: 20px;">Medium @ 700/=</label><br>
+                                                <label for="medium" style="font-size: 20px;">Medium @ 700/=</label>
                                                 
                                                 <input type="radio" id="large" name="size" value="Large">
                                                 <label for="large" style="font-size: 25px;">Large @ 900/=</label> 
@@ -39,7 +38,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="first-hide">
+                                    <div class="extra-choices">
                                         <div class="row" id="row-1">
                                             <div class="col-md-2" id="col-1"><label for="flavour" class="labels">Flavour: </label></div>
                                             <div class="col-md-10">
@@ -51,7 +50,7 @@
                                                     <label for="chicken-tika">Chicken tika</label>
     
                                                     <input type="radio" value="Periperi" name="flavour" id="periperi">
-                                                    <label for="periperi">Periperi</label><br>
+                                                    <label for="periperi">Periperi</label>
     
                                                     <input type="radio" value="Veg Mushroom" name="flavour" id="veg-mushroom">
                                                     <label for="veg-mushroom">Veg Mushroom</label>
@@ -60,7 +59,7 @@
                                                     <label for="bbq">BBQ</label>
     
                                                     <input type="radio" value="Chicken mushroom" name="flavour" id="chicken-mushroom">
-                                                    <label for="chicken-mushroom">Chicken mushroom</label><br>
+                                                    <label for="chicken-mushroom">Chicken mushroom</label>
     
                                                     <input type="radio" value="Meat Deluxe" name="flavour" id="meat-deluxe">
                                                     <label for="meat-deluxe">Meat Deluxe</label>
@@ -77,10 +76,10 @@
                                                 <div class="crust">
                                                     <input type="radio" value="crispy" name="crusts" id="crispy"><label for="crispy">Crispy</label>
                                                     <input type="radio" value="stuffed" name="crusts" id="stuffed"><label for="stuffed">Stuffed</label>
-                                                    <input type="radio" value="gluten free" name="crusts" id="gluten-free"><label for="gluten-free">Gluten free</label><br>
+                                                    <input type="radio" value="gluten free" name="crusts" id="gluten-free"><label for="gluten-free">Gluten free</label>
                                                     <input type="radio" value="sicilian" name="crusts" id="sicilian"><label for="sicilian">Sicilian</label>
                                                     <input type="radio" value="cheese filled"name="crusts" id="cheese-filled"><label for="cheese-filled">Cheese filled</label>
-                                                    <input type="radio" value="thin" name="crusts" id="thin"><label for="thin">Thin</label> <br>
+                                                    <input type="radio" value="thin" name="crusts" id="thin"><label for="thin">Thin</label> 
                                                     <input type="radio" value="flat bread" name="crusts" id="flat-bread"><label for="flat-bread">flat-bread</label> 
                                                     <input type="radio" value="neapolitan" name="crusts" id="neapolitan"> <label for="neapolitan">Neapolitan</label>
                                                     <input type="radio" value="NY crust" name="crusts" id="ny-crust"> <label for="ny-crust">NY Crust</label> 
@@ -99,7 +98,7 @@
                                                     <label for="onions">Onions</label>
     
                                                     <input type="radio" value="sausages" class="toppings" id="sausages">
-                                                    <label for="sausages">Sausages</label><br>
+                                                    <label for="sausages">Sausages</label>
     
                                                     <input type="radio" value="Extra-cheese" class="toppings" id="extra-cheese">
                                                     <label for="extra-cheese">Extra-cheese</label>
@@ -108,7 +107,7 @@
                                                     <label for="black-olives">Black Olives</label> 
                                                     
                                                     <input type="radio" value="green-peppers" class="toppings" id="green-peppers">
-                                                    <label for="green-peppers">Green Peppers</label> <br>
+                                                    <label for="green-peppers">Green Peppers</label>
     
                                                     <input type="radio" value="pineapple" class="toppings" id="pineapple">
                                                     <label for="pineapple">Pineapple</label> 
@@ -122,59 +121,119 @@
                                             </div>
                                         </div>
                                         <div class="row" id="row-1">
-                                            <div class="col-md-1"></div>                           
-                                            <div class="col-md-11">
-                                                <div class="number">
-                                                    <input type="text" id="number-pizza" placeholder="How many pizzas?">
-                                                </div>                                                                                             
-                                            </div>
-                                        </div>
-                                        <div class="row" id="row-1">                                            
-                                            <div class="delivery">
-                                                <input type="radio" value="Reserve" name ="type" id="reserve">
-                                                <label for="reserve">I want my pizza reserved</label>
-    
-                                                <input type="radio" value="Deliver" name="type" id="deliver" .checked>
-                                                <label for="deliver">I want my pizza delivered</label>     
-                                            </div>
-                                        </div>    
-                                        <div class="row">                                                                                           
-                                            <div class="del-location">
-                                                <label for="location" class="labels-1">Enter delivery location: </label>
-                                                <input type="text" name="location" placeholder="Location">
-                                            </div>
-                                        </div>                                                                                                                          
-                                        <div class="row" id="row-1">
                                             <div class="col-md-1"></div>
                                             <div class="col-md-11">
-                                                <div class="submit">
-                                                    <button type="submit" name="order">SUBMIT ORDER</button>
-                                                    <button type="cancel"name="cancel">CANCEL ORDER</button>
+                                                <div class="order">
+                                                    <button type="submit" name="order" >ORDER</button>
+                                                    <button type="cancel" name="cancel">CANCEL ORDER</button>
                                                 </div>                 
                                             </div>                                                                       
                                         </div>
                                     </div>
-                                    
-                 
-                                </form>
+                                </div>                                
                             </div>
                         </div>
                     </div>
-                        <div class="col-md-4">
-                            <div class="card" id="card-2">
-                                <div class="card-header" id="card-header2">
-                                    <h3></h3>
-                                </div>
-                                <div class="card-body">
-
-                                </div>
+                    <div class="col-md-5">
+                        <div class="card" id="card-2">
+                            <div class="card-header" id="card-header2">
+                                <h3 style="text-align: center;">Order summary</h3>
                             </div>
+                            <div class="card-body">
+                               <div class="summary">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <h4>Order specifications</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4>Price</h4>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p>Size:</p>
+                                                <p>Flavour:</p>
+                                                <p>Crust:</p>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <p><span id="size"></span></p>
+                                                <p><span id="flavour"></span></p>
+                                                <p><span id="crust"></span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">                                      
+                                        <p><span id="initial-cost"></span></p>
+                                        <p>N/A</p>
+                                        <p><span id="crust-cost"></span></p>                                       
+                                    </div>                                   
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <p>Extras:</p>                                                
+                                            </div>
+                                            <div class="col-md-8">
+                                                <p><span id="toppings"></span></p>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">                                      
+                                        <p><span id="toppings-cost"></span></p>                                                                            
+                                    </div>                                   
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <p style="text-align: right;">Sub-total:</p>
+                                    </div>
+                                    <div class="col-md-3">                                      
+                                        <p id="total"><span id="pizza-cost"></span></p>                                                                               
+                                    </div>                                   
+                                </div>                            
+                            </div>                   
+                            <div class="row">                                   
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p style="text-align: right;">How  many pizzas?</p>                                                
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="number" id="pizza-number">                                                
+                                    </div>
+                                </div>                                                                                                          
+                            </div>
+                            <div class="row">                                   
+                                <div  class="col-md-5"></div>
+                                <div class="col-md-7">
+                                    <button type="button" id="deliver">I want my pizza delivered</button>  
+                                    <div class="location">
+                                        <input type="text" id="location" placeholder="Enter location"><br>
+                                        <p>Delivery charge: 100/=</p>   
+                                    </div>                                                                             
+                                </div>                                                                                                          
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <p style="text-align: right;">Total charges:</p>
+                                </div>
+                                <div class="col-md-3">                                      
+                                    <p id="total2"><span id="total-cost"></span></p>                                                                               
+                                </div>                                   
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p style="text-align: right;"><button type="button" id="confirm">Confirm Order</button></p>
+                                </div>
+                                <div class="col-md-4">                                      
+                                    <p><button type="reset">Reset Order</button></p>
+                                                                                                                
+                                </div>                                   
+                            </div>                                                                                                                                                             
                         </div>
                     </div>
-                    
-    
-                </div>
-
+                </div>                
             </div>
         </body>
     </html>
