@@ -1,10 +1,11 @@
     <html>
         <head>
-            <title>inPizza</title>
+            
             <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
             <link href="css/styles.css" rel="stylesheet" type="text/css">
-            <script src="js/jquery-3.5.1.js"></script>
+            <script src="js/jquery-3.5.1.js" ></script>
             <script src="js/scripts.js"></script>
+            <title>inPizza</title>
         </head>
         <body>
             <div class="container">
@@ -28,7 +29,7 @@
                                                 <label for="regular"style="font-size:20px;">Regular @ 500/=</label>
                                         
                                                 <input type="radio" id="medium" name="size" value="Medium">
-                                                <label for="medium" style="font-size: 20px;">Medium @ 700/=</label>
+                                                <label for="medium" style="font-size: 20px;">Medium @ 700/=</label><br>
                                                 
                                                 <input type="radio" id="large" name="size" value="Large">
                                                 <label for="large" style="font-size: 25px;">Large @ 900/=</label> 
@@ -74,15 +75,15 @@
                                             <div class="col-md-2" id="col-1"><label for="crusts" class="labels">Crusts: </label></div>
                                             <div class="col-md-10">
                                                 <div class="crust">
-                                                    <input type="radio" value="crispy" name="crusts" id="crispy"><label for="crispy">Crispy</label>
-                                                    <input type="radio" value="stuffed" name="crusts" id="stuffed"><label for="stuffed">Stuffed</label>
-                                                    <input type="radio" value="gluten free" name="crusts" id="gluten-free"><label for="gluten-free">Gluten free</label>
-                                                    <input type="radio" value="sicilian" name="crusts" id="sicilian"><label for="sicilian">Sicilian</label>
-                                                    <input type="radio" value="cheese filled"name="crusts" id="cheese-filled"><label for="cheese-filled">Cheese filled</label>
-                                                    <input type="radio" value="thin" name="crusts" id="thin"><label for="thin">Thin</label> 
-                                                    <input type="radio" value="flat bread" name="crusts" id="flat-bread"><label for="flat-bread">flat-bread</label> 
-                                                    <input type="radio" value="neapolitan" name="crusts" id="neapolitan"> <label for="neapolitan">Neapolitan</label>
-                                                    <input type="radio" value="NY crust" name="crusts" id="ny-crust"> <label for="ny-crust">NY Crust</label> 
+                                                    <input type="radio" value="crispy" class="classic" name="crusts" id="crispy"><label for="crispy">Crispy</label>
+                                                    <input type="radio" value="stuffed" class="classic" name="crusts" id="stuffed"><label for="stuffed">Stuffed</label>
+                                                    <input type="radio" value="gluten free" class="classic" name="crusts" id="gluten-free"><label for="gluten-free">Gluten free</label>
+                                                    <input type="radio" value="sicilian" class="median" name="crusts" id="sicilian"><label for="sicilian">Sicilian</label>
+                                                    <input type="radio" value="cheese filled" class="median" name="crusts" id="cheese-filled"><label for="cheese-filled">Cheese filled</label>
+                                                    <input type="radio" value="thin" class="median" name="crusts" id="thin"><label for="thin">Thin</label> 
+                                                    <input type="radio" value="flat bread" class="super" name="crusts" id="flat-bread"><label for="flat-bread">flat-bread</label> 
+                                                    <input type="radio" value="neapolitan" class="super" name="crusts" id="neapolitan"> <label for="neapolitan">Neapolitan</label>
+                                                    <input type="radio" value="NY crust" class="super" name="crusts" id="ny-crust"> <label for="ny-crust">NY Crust</label> 
                                                 </div>
                                                     
                                             </div>
@@ -124,7 +125,7 @@
                                             <div class="col-md-1"></div>
                                             <div class="col-md-11">
                                                 <div class="order">
-                                                    <button type="submit" name="order" >ORDER</button>
+                                                    <button type="submit" id="order" name="order">MAKE ORDER</button>
                                                     <button type="cancel" name="cancel">CANCEL ORDER</button>
                                                 </div>                 
                                             </div>                                                                       
@@ -135,103 +136,105 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div class="card" id="card-2">
-                            <div class="card-header" id="card-header2">
-                                <h3 style="text-align: center;">Order summary</h3>
-                            </div>
-                            <div class="card-body">
-                               <div class="summary">
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <h4>Order specifications</h4>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <h4>Price</h4>
-                                    </div>
+                        <form class="order-form">
+                            <div class="card" id="card-2">
+                                <div class="card-header" id="card-header2">
+                                    <h3 style="text-align: center;">Order summary</h3>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <p>Size:</p>
-                                                <p>Flavour:</p>
-                                                <p>Crust:</p>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <p><span id="size"></span></p>
-                                                <p><span id="flavour"></span></p>
-                                                <p><span id="crust"></span></p>
-                                            </div>
+                                <div class="card-body">
+                                   <div class="summary">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <h4>Order specifications</h4>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <h4>Price</h4>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">                                      
-                                        <p><span id="initial-cost"></span></p>
-                                        <p>N/A</p>
-                                        <p><span id="crust-cost"></span></p>                                       
-                                    </div>                                   
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <p>Extras:</p>                                                
-                                            </div>
-                                            <div class="col-md-8">
-                                                <p><span id="toppings"></span></p>                                                
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <p>Size:</p>
+                                                    <p>Flavour:</p>
+                                                    <p>Crust:</p>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p><span id="order-size"></span></p>
+                                                    <p><span id="flavour"></span></p>
+                                                    <p><span id="crust"></span></p>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="col-md-3">                                      
+                                            <p><span id="initial-cost"></span></p>
+                                            <p>N/A</p>
+                                            <p><span id="crust-cost"></span></p>                                       
+                                        </div>                                   
                                     </div>
-                                    <div class="col-md-3">                                      
-                                        <p><span id="toppings-cost"></span></p>                                                                            
-                                    </div>                                   
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <p>Extras:</p>                                                
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p><span id="toppings"></span></p>                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">                                      
+                                            <p><span id="toppings-cost"></span></p>                                                                            
+                                        </div>                                   
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <p style="text-align: right;">Sub-total:</p>
+                                        </div>
+                                        <div class="col-md-3">                                      
+                                            <p><span id="pizza-cost"></span></p>                                                                               
+                                        </div>                                   
+                                    </div>                            
+                                </div>                   
+                                <div class="row">                                   
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p style="text-align: right;">How  many pizzas?</p>                                                
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="number" id="pizza-number">                                                
+                                        </div>
+                                    </div>                                                                                                          
+                                </div>
+                                <div class="row">                                   
+                                    <div  class="col-md-5"></div>
+                                    <div class="col-md-7">
+                                        <button type="button" id="deliver">I want my pizza delivered</button>  
+                                        <div class="location">
+                                            <input type="text" id="location" placeholder="Enter location"><br>
+                                            <p>Delivery charge: 100/=</p>   
+                                        </div>                                                                             
+                                    </div>                                                                                                          
                                 </div>
                                 <div class="row">
                                     <div class="col-md-9">
-                                        <p style="text-align: right;">Sub-total:</p>
+                                        <p style="text-align: right;">Total charges:</p>
                                     </div>
                                     <div class="col-md-3">                                      
-                                        <p id="total"><span id="pizza-cost"></span></p>                                                                               
+                                        <p id="total2"><span id="total-cost"></span></p>                                                                               
                                     </div>                                   
-                                </div>                            
-                            </div>                   
-                            <div class="row">                                   
+                                </div>
                                 <div class="row">
                                     <div class="col-md-8">
-                                        <p style="text-align: right;">How  many pizzas?</p>                                                
+                                        <p style="text-align: right;"><button type="button" id="confirm">Confirm Order</button></p>
                                     </div>
-                                    <div class="col-md-4">
-                                        <input type="number" id="pizza-number">                                                
-                                    </div>
-                                </div>                                                                                                          
+                                    <div class="col-md-4">                                      
+                                        <p><button type="reset">Reset Order</button></p>
+                                                                                                                    
+                                    </div>                                   
+                                </div>                                                                                                                                                             
                             </div>
-                            <div class="row">                                   
-                                <div  class="col-md-5"></div>
-                                <div class="col-md-7">
-                                    <button type="button" id="deliver">I want my pizza delivered</button>  
-                                    <div class="location">
-                                        <input type="text" id="location" placeholder="Enter location"><br>
-                                        <p>Delivery charge: 100/=</p>   
-                                    </div>                                                                             
-                                </div>                                                                                                          
-                            </div>
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <p style="text-align: right;">Total charges:</p>
-                                </div>
-                                <div class="col-md-3">                                      
-                                    <p id="total2"><span id="total-cost"></span></p>                                                                               
-                                </div>                                   
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <p style="text-align: right;"><button type="button" id="confirm">Confirm Order</button></p>
-                                </div>
-                                <div class="col-md-4">                                      
-                                    <p><button type="reset">Reset Order</button></p>
-                                                                                                                
-                                </div>                                   
-                            </div>                                                                                                                                                             
-                        </div>
+                        </form>                       
                     </div>
                 </div>                
             </div>

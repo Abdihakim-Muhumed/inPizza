@@ -57,7 +57,7 @@ h1{
     padding: 5px 10px;
     font-family: sans-serif, Arial;
     font-size: 20px;
-    border: 2px solid #444;
+    bs: 2px solid #444;
     border-radius: 4px;
 
 }
@@ -146,6 +146,10 @@ h1{
 button[name="order"]{
     background-color: gray;
     color: white;
+    border: 1px solid #444;
+}
+button[name="cancel"]{
+    border: 1px solid #444;
 }
 .order button {
     margin: 10px;
@@ -153,7 +157,7 @@ button[name="order"]{
     padding: 10px 20px;
     font-family: sans-serif, Arial;
     font-size: 20px;
-    border: 2px solid #444;
+
     border-radius: 4px;
 }
 
@@ -185,4 +189,7 @@ button[name="order"]{
 #total{
     border: 1px solid;
     margin: 10px;
+}
+.order-form{
+    display: none;
 }
