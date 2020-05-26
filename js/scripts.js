@@ -25,15 +25,6 @@ $(document).ready(function(){
             else{
                 toppingsCost=0;
             }
-            if($("input[class='classic']:checked").val().length >0){
-                 crustCost=200;
-            }  
-            else if($("input[class='median']:checked").val().length >0){
-                 crustCost=300;
-            }
-            else if($("input[class='super']:checked").val().length >0){
-                 crustCost=400;
-            }
            
         }
         else if($("input[name='size']:checked").val()==="Medium"){
@@ -45,15 +36,7 @@ $(document).ready(function(){
             else{
                 toppingsCost=0;
             }
-            if($("input[class='classic']:checked").val().length >0){
-                 crustCost=200;
-            }  
-            else if($("input[class='median']:checked").val().length >0){
-                 crustCost=300;
-            }
-            else if($("input[class='super']:checked").val().length >0){
-                 crustCost=400;
-            }
+           
         }
         else if($("input[name='size']:checked").val()==="Large"){
             initialCost = 900;
@@ -64,15 +47,7 @@ $(document).ready(function(){
             else{
                 toppingsCost=0;
             }
-            if($("input[class='classic']:checked").val().length >0){
-                 crustCost=200;
-            }  
-            else if($("input[class='median']:checked").val().length >0){
-                 crustCost=300;
-            }
-            else if($("input[class='super']:checked").val().length >0){
-                 crustCost=400;
-            }
+            
         }
         else if($("input[name='size']:checked").val()==="Mega"){
              initialCost = 1100;
@@ -83,16 +58,23 @@ $(document).ready(function(){
             else{
                 toppingsCost=0;
             }
-            if($("input[class='classic']:checked").val().length >0){
-                 crustCost=200;
-            }  
-            else if($("input[class='median']:checked").val().length >0){
-                 crustCost=300;
+            
+        }
+        if($("input[class='classic']:checked").val().length >0){
+            crustCost=200;
+        }         
+        else{
+            if($("input[class='median']:checked").val().length >0){
+                crustCost=300;
             }
-            else if($("input[class='super']:checked").val().length >0){
-                 crustCost=400;
+            else{
+                if($("input[class='super']:checked").val().length >0){
+                    crustCost=400;
+                }
+                else{crustCost=0;}
             }
         }
+      
         var price = initialCost+crustCost+toppingsCost;
         
         newPizza = new Pizza(size,flavour,crusts);
@@ -113,7 +95,7 @@ $(document).ready(function(){
             numberOfPizza=$("#pizza-number").val();
             totalCost=(price*numberOfPizza)+deliveryCost;
             if($("#location").val().length<0){              
-                alert("Enter valid location!")
+                alert("Enter valid location!");
             }
             else{                
                 alert("Your order will be delivered to "+ $("#location").last().val());
