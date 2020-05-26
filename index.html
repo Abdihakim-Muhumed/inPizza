@@ -125,8 +125,8 @@
                                             <div class="col-md-1"></div>
                                             <div class="col-md-11">
                                                 <div class="order">
-                                                    <button type="submit" id="order" name="order">CONFIRM ORDER</button>
-                                                    <button type="cancel" name="cancel">CANCEL ORDER</button>
+                                                    <button type="submit" id="order" name="order">Submit</button>
+                                                    <button type="cancel" name="cancel">Cancel</button>
                                                 </div>                 
                                             </div>                                                                       
                                         </div>
@@ -143,99 +143,129 @@
                                 </div>
                                 <div class="card-body">
                                    <div class="summary">
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <h4>Order specifications</h4>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h4>Price</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p>Size:</p>
+                                                        <p>Flavour:</p>
+                                                        <p>Crust:</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p><span id="order-size"></span></p>
+                                                        <p><span id="flavour"></span></p>
+                                                        <p><span id="crusts"></span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">                                      
+                                                <p><span id="initial-cost"></span></p>
+                                                <p>N/A</p>
+                                                <p><span id="crust-cost"></span></p>                                       
+                                            </div>                                   
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <div class="row">
+                                                    <div class="col-md-4"></div>
+                                                    <div class="col-md-8">
+                                                        <p>Toppings:</p>                                                
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">                                      
+                                                <p><span id="toppings-cost"></span></p>                                                                            
+                                            </div>                                   
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-9">
+                                                <p style="text-align: right;">Total:</p>
+                                            </div>
+                                            <div class="col-md-3">                                      
+                                                <p><span id="pizza-cost"></span></p>                                                                               
+                                            </div>                                   
+                                        </div>                            
+                                    </div>                   
+                                    <div class="row">                                   
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-7">
+                                                <p style="text-align: right;">How  many pizzas?</p>                                                
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input type="number" id="pizza-number" value="1">                                                
+                                            </div>
+                                        </div>                                                                                                          
+                                    </div>
+                                    <div class="row">                                   
+                                        <div  class="col-md-5"></div>
+                                        <div class="col-md-7">
+                                            <p style="text-align: right;"><button type="button" id="deliver">I want my pizza delivered</button> </p> 
+                                            <div class="location">
+                                                <input type="text" id="location" placeholder="Enter location"><br>
+                                                <p>Delivery charge: 100/=</p>   
+                                            </div>                                                                             
+                                        </div>                                                                                                          
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <p style="text-align: right;"><button type="button" id="confirm">Check out</button></p>
+                                        </div>
+                                        <div class="col-md-4">                                      
+                                            <p><button type="reset">Reset </button></p>                                                                                                                    
+                                        </div>                                   
+                                    </div>                                                                 
                                     <div class="row">
                                         <div class="col-md-9">
-                                            <h4>Order specifications</h4>
+                                            <p style="text-align: right;"><span id="order-placed"></span></p>
+                                        </div>
+                                        <div class="col-md-3">                                      
+                                            <p id="total2"><span id="total-cost"></span></p>                                        
+                                        </div>                                   
+                                    </div>                                                                                                                                                            
+                                </div>
+                            </div>>
+                        </form>                       
+                    </div> 
+                    <div class="history">                        
+                        <div class="row">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4>Order History</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h5>Order</h5>
+                                            <div id="order-name"></div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h5>Delivery</h5>
+                                            <p><span id="order-delivery"></span><br></p>
                                         </div>
                                         <div class="col-md-3">
-                                            <h4>Price</h4>
+                                            <h5>Cost</h5>
+                                            <p id="order-cost"></p>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <p>Size:</p>
-                                                    <p>Flavour:</p>
-                                                    <p>Crust:</p>
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <p><span id="order-size"></span></p>
-                                                    <p><span id="flavour"></span></p>
-                                                    <p><span id="crusts"></span></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">                                      
-                                            <p><span id="initial-cost"></span></p>
-                                            <p>N/A</p>
-                                            <p><span id="crust-cost"></span></p>                                       
-                                        </div>                                   
+                                        <div class="order">
+                                            <p type="submit">Thanks for ordering at inPizza.We are pleased to serve you!</p>                                          
+                                        </div>                                        
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col-md-4"></div>
-                                                <div class="col-md-8">
-                                                    <p>Toppings:</p>                                                
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">                                      
-                                            <p><span id="toppings-cost"></span></p>                                                                            
-                                        </div>                                   
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-9">
-                                            <p style="text-align: right;">Total:</p>
-                                        </div>
-                                        <div class="col-md-3">                                      
-                                            <p><span id="pizza-cost"></span></p>                                                                               
-                                        </div>                                   
-                                    </div>                            
-                                </div>                   
-                                <div class="row">                                   
-                                    <div class="row">
-                                        <div class="col-md-3"></div>
-                                        <div class="col-md-7">
-                                            <p style="text-align: right;">How  many pizzas?</p>                                                
-                                        </div>
-                                        <div class="col-md-2">
-                                            <input type="number" id="pizza-number" value="1">                                                
-                                        </div>
-                                    </div>                                                                                                          
                                 </div>
-                                <div class="row">                                   
-                                    <div  class="col-md-5"></div>
-                                    <div class="col-md-7">
-                                        <p style="text-align: right;"><button type="button" id="deliver">I want my pizza delivered</button> </p> 
-                                        <div class="location">
-                                            <input type="text" id="location" placeholder="Enter location"><br>
-                                            <p>Delivery charge: 100/=</p>   
-                                        </div>                                                                             
-                                    </div>                                                                                                          
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <p style="text-align: right;"><button type="submit" id="confirm">Check out</button></p>
-                                    </div>
-                                    <div class="col-md-4">                                      
-                                        <p><button type="reset">Reset </button></p>
-                                                                                                                    
-                                    </div>                                   
-                                </div>                                                                 
-                                <div class="row">
-                                    <div class="col-md-9">
-                                        <p style="text-align: right;"><span id="order-placed"></span></p>
-                                    </div>
-                                    <div class="col-md-3">                                      
-                                        <p id="total2"><span id="total-cost"></span></p>                                        
-                                    </div>                                   
-                                </div>                                                                                                                                                            
                             </div>
-                        </form>                       
-                    </div>
-                </div>                
+                        </div>                        
+                    </div>                   
+                </div>                                
             </div>
         </body>
     </html>

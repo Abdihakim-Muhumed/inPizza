@@ -105,7 +105,7 @@ $(document).ready(function(){
         $("#toppings-cost").append(toppingsCost);
         $("#pizza-cost").append(price);
         
-        $("#deliver").click(function(){
+        $("#deliver").last().click(function(){
             deliveryCost=100;
             $(".location").show();                      
         });
@@ -116,9 +116,15 @@ $(document).ready(function(){
                 alert("Enter valid location!")
             }
             else{                
-                alert("Your order will be delivered to "+ $("#location").val());
+                alert("Your order will be delivered to "+ $("#location").last().val());
                 alert(" Order placed Total charges:" +totalCost );
             }
+            $(".history").show();
+            $(".order-form").hide();
+            $("#order-name").append(`<p>Pizza</P>`);
+            $("#order-delivery").append($("#location").last().val());
+            $("#order-cost").append(totalCost);
+           
         });        
     });
     
