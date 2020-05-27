@@ -60,15 +60,15 @@ $(document).ready(function(){
             }
             
         }
-        if($("input[class='classic']:checked").val().length >0){
+        if($("input[id='crispy']:checked").val().length >0){
             crustCost=200;
         }         
         else{
-            if($("input[class='median']:checked").val().length >0){
+            if($("input[id='stuffed']:checked").val().length >0){
                 crustCost=300;
             }
             else{
-                if($("input[class='super']:checked").val().length >0){
+                if($("input[id='gluten-free']:checked").val().length >0){
                     crustCost=400;
                 }
                 else{crustCost=0;}
@@ -106,7 +106,10 @@ $(document).ready(function(){
             $("#order-name").append(`<p>Pizza</P>`);
             $("#order-delivery").append($("#location").last().val());
             $("#order-cost").append(totalCost);
-           
+            $("#reload").click(function(){
+                alert("Thanks for the feedack");
+                location.reload(true);
+            })
         });        
     });
     
